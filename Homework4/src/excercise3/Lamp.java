@@ -1,35 +1,47 @@
 package excercise3;
 
 public class Lamp implements Switchable, Dimmable{
+	private boolean on;
+	private int brightness;
 
 	@Override
 	public void turnOn() {
-		// TODO Auto-generated method stub
+		this.on=true;
 		
 	}
 
 	@Override
 	public void turnOff() {
-		// TODO Auto-generated method stub
-		
+		this.on=false;
 	}
 
 	@Override
 	public boolean isOn() {
-		// TODO Auto-generated method stub
-		return false;
+		return on;
 	}
 	
+	/**
+	 * sets the brightness to the given value, ensures brightness is between 0 and MAX_BRIGHTNESS, can only be changed when lamp is on
+	 * @param level The brightness level to set the lamp to
+	 * @author aabert 
+	 */
 	@Override
 	public void setBrightness(int level) {
-		// TODO Auto-generated method stub
-		
+		if(0<=level && level<=MAX_BRIGHTNESS) {
+			if(isOn()==true) {
+				this.brightness=level;
+			}
+			else {
+				System.err.println("The lamp has to be on when changing the brightness!");
+			}
+		} else {
+			System.err.println("The light level has to be between 0 and " + MAX_BRIGHTNESS);
+		}
 	}
 	
 	@Override
 	public int getBrightness() {
-		// TODO Auto-generated method stub
-		return 0;
+		return brightness;
 	}
 
 }
