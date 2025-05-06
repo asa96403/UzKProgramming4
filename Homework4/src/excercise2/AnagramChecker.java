@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class AnagramChecker {
 
 	public static void main(String[] args) {
+		System.out.println("Welcome to Letter Soup Deluxe!");
 		Scanner scanner = new Scanner(System.in);
 		// Get two strings from the user
 		System.out.print(" Enter the first string: ");
