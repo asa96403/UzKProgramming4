@@ -1,8 +1,8 @@
 package excercise1;
 
 public abstract class PopularGrocery extends GroceryItem{
-	private int popularityLevel;
-	private int quantity;
+	protected int popularityLevel;
+	protected int quantity;
 	
 	public PopularGrocery(int popularityLevel) {
 		isPopular=true;
