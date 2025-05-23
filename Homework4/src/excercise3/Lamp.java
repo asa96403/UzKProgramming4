@@ -37,6 +37,7 @@ public class Lamp implements Switchable, Dimmable{
 		} else {
 			System.err.println("The light level has to be between 0 and " + MAX_BRIGHTNESS);
 		}
+		//auch möglich: brightness = Math.max(0, Math.min(MAX_BRIGHTNESS , level));
 	}
 	
 	@Override

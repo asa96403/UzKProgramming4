@@ -45,7 +45,7 @@ public class AnagramChecker {
 		int[] counts = new int[26];
 		Arrays.fill(counts, 0);
 		for(int i=0; i<s.length(); i++) {
-			if(0 <= (int) s.charAt(i)-97 && (int) s.charAt(i)-97<=26) {
+			if(0 <= (int) s.charAt(i)-97 && (int) s.charAt(i)-97<25) {
 				counts[(int) s.charAt(i)-97]++;
 			}
 		}
